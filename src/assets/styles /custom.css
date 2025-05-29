@@ -169,7 +169,13 @@ body {
 }
 
 .calendar-section {
-    padding: 0 min(6vw, 24px) min(6vw, 24px);
+    padding: 0 6vw;
+}
+
+@media (min-width: 400px) {
+    .calendar-section {
+        padding: 0 24px;
+    }
 }
 
 .calendar-grid {
@@ -179,8 +185,14 @@ body {
     background: var(--neutral-50);
     border-radius: min(4vw, 16px);
     overflow: hidden;
-    padding: min(4vw, 16px);
+    padding: 4vw;
     transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+@media (min-width: 400px) {
+    .calendar-grid {
+        padding: 16px;
+    }
 }
 
 .day-header {
