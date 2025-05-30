@@ -9,7 +9,7 @@ function PopUp({ isOpen, closeModal, content, type }) {
     const formatAvailability = (availability) => {
         return availability.map(({ month, startDay, endDay }) =>
             `${month}월 ${startDay}일~${endDay}일`
-        ).join(', ');
+        ).join('\n');
     };
 
     const handleFoodClick = (food) => {
@@ -30,7 +30,7 @@ function PopUp({ isOpen, closeModal, content, type }) {
                             <div className="modal-food-season">{(selectedFood || content).season}</div>
                             <div className="modal-food-description">{(selectedFood || content).description}</div>
                             <div className="modal-availability">
-                                <strong>Available:</strong> {formatAvailability((selectedFood || content).availability)}
+                                <strong>맛있는 시기 </strong><br/> {formatAvailability((selectedFood || content).availability)}
                             </div>
                         </div>
                     )}

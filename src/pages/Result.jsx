@@ -36,7 +36,7 @@ function Result({ currentMonth, openModal }) {
         <div className="calendar-section">
             <div className="calendar-grid">
                 {daysOfWeek.map((day, idx) => (
-                    <div key={idx} className="day-header">{day}</div>
+                    <div key={idx} className="day-header" style={{ color: day === '일' ? 'red' : day === '토' ? 'blue' : undefined }}>{day}</div>
                 ))}
                 {days.map((day, idx) => {
                     const isVisible = visibleDays.includes(idx);
